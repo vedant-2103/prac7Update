@@ -6,7 +6,7 @@
 int QuickSort::pivotFinder(std::vector<int>&arr,int lowestIndex,int highestIndex)
 {
     int pivot=arr[highestIndex];
-    int i=lowestIndex;
+    int i=lowestIndex-1;
     for(int j=lowestIndex; j<highestIndex; j++)
     {
         if(arr[j]<pivot)
@@ -15,8 +15,8 @@ int QuickSort::pivotFinder(std::vector<int>&arr,int lowestIndex,int highestIndex
             std::swap(arr[i],arr[j]);
         }
     }
-    std::swap(arr[i],arr[highestIndex]);
-    return i;
+    std::swap(arr[i+1],arr[highestIndex]);
+    return i+1;
 }
 
 void QuickSort::quicksort(std::vector<int>& list, int lowestIndex, int highestIndex)
