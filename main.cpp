@@ -8,19 +8,22 @@
 
 int main()
 {
-    BubbleSort objectBubble;
     QuickSort objectQuick;
     RecursiveBinarySearch objectRecursive;
+
+    
     std::vector<int> integerList;
-    std::string in;
-    std::string temp;
-    std::getline(std::cin, in);
+    std::string integer;
+    std::string temporary_string;
+    std::getline(std::cin, integer);
     std::stringstream temp1;
-    temp1<<in;
+    temp1<<integer;
+
+
     while(!temp1.eof())
     {
-        temp1>>temp;
-        integerList.push_back(stoi(temp));
+        temp1>>temporary_string;
+        integerList.push_back(stoi(temporary_string));
     }
 
     integerList=objectQuick.sort(integerList);
