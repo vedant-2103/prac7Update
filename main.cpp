@@ -19,7 +19,7 @@ int main()
     temp1<<in;
     while(!temp1.eof())
     {
-        temp1<<temp;
+        temp1>>temp;
         integerList.push_back(stoi(temp));
     }
 
